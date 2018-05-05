@@ -1,0 +1,69 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Mashion | Search</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+</head>
+
+<body>
+  <div class="container">
+    <div class="grid navibar">
+      <div class="grid logo">
+        <a href="index.html">Mashion</a>
+      </div>
+
+      <div class="grid navi">
+        <a class="navlink active" href="index.html">Shuffle</a>
+        <a class="navlink" href="search.html">StyleSearch</a>
+        <a class="navlink" href="mens.html">Menswear</a>
+        <a class="navlink" href="fems.html">Femmeswear</a>
+      </div>
+    </div>
+
+    <div class="grid intro">
+      <h3>Search Styles</h3>
+      <p>Pulls trending images from a subreddit of choice based on keywords.</p>
+      <div class="search">
+      </div>
+    </div>
+
+    <div id="searchArea">
+      
+      <div id="dropdown">
+        <!-- the actual dropdown menu -->
+        <select id="subreddit">
+            <option class="noedit" value="fashion">r/fashion</option>
+            <option class="noedit" value="malefashionadvice">r/maleFashionAdvice</option>
+            <option class="noedit" value="femalefashionadvice">r/femaleFashionAdvice</option>
+            <option class="noedit" value="findfashion">r/findFashion</option>
+            <option class="noedit" value="outfits">r/outfits</option>
+            <option class="editable" value="custom">enter custom subreddit...</option>
+          </select>
+        <!-- when the user selects the "custom" field in the dropdown,
+          the following input field will show up for the user to select a custom subreddit -->
+        <input id="customSub" type="text" value="Enter custom subreddit...">
+        <input id="searchTerm" type="text" placeholder="Enter search term...">
+        <button id="searchBtn">search</button>
+      </div>
+    </div>
+    
+    <!-- the div below is where thumbnails will be displayed, separated for organization/styling purposes -->
+    <div class="grid placeholders" id="placeholders">
+      <img src="https://media.istockphoto.com/photos/fashion-woman-wearing-elegant-hat-jacket-handbag-clutch-over-picture-id595359836?k=6&m=595359836&s=612x612&w=0&h=DoIHitJ0NRSaUvs6E-zc9M-8OG2zJc7bHBJ1neT8ZHM=" alt="">
+      <img src="http://styleninetofive.com/wp-content/uploads/2017/09/adamg.jpg" alt="">
+      <img src="https://www.ebuzztoday.com/wp-content/uploads/ToraPhotography-ProductPhotographyMontreal-MakeupProductsLayout.jpg" alt="">
+    </div>
+
+    <div class="searchResults">
+
+    </div>
+
+    <div class="grid footer">&copy; B.J.R.S. 2018 <br> Bindhu, Josh, Raghav, Sean
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+</body>
+
+</html>
