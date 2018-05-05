@@ -1,5 +1,5 @@
         .activeCard {
-            text-transform: uppercase;
+            text-transform: lowercase;
         }
 
         a:link, a:visited, a:hover, a:active {
