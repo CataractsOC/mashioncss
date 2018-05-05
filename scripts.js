@@ -34,6 +34,6 @@ $(document).ready(function() {
   .mouseleave(function() {
     $(this).removeClass('activeCard')
     $(this).empty();
-    $(this).append("/r" + $(this).attr('id'));
+    $(this).append("r/" + $(this).attr('id'));
   });
 });
