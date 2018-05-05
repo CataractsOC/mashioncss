@@ -1,0 +1,189 @@
+
+
+.footer {
+  grid-area: ft;
+  background: #f5c531 !important;
+  height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 5px 5px #888888;
+}
+
+#searchArea {
+  grid-area: searchbox;
+  background: #555555;
+  text-align: center;
+  box-shadow: 5px 5px #888888;
+  margin: auto 0;
+  max-width: 890px;
+  padding: 10px;
+}
+
+body {
+  font-family: "Source Sans Pro";
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 5px;
+  margin: 0 auto;
+  max-width: 900px;
+  grid-template-areas:
+    "navibar navibar navibar"
+    "intro intro intro"
+    "searchbox searchbox searchbox"
+    "placeholders placeholders placeholders"
+    "results results results"
+    "ft ft ft";
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.grid {
+  background-color: #444;
+  color: #fff;
+  padding: 10px;
+  font-size: 1em;
+  margin: 5px 5px 5px 5px;
+}
+
+.navibar {
+  grid-area: navibar;
+  display: grid;
+  grid-template-areas: "logo navi navi navi";
+  box-shadow: 5px 5px #888888;
+}
+
+.logo {
+  grid-area: logo;
+  background: #f5c531;
+  box-shadow: 5px 5px #777777;
+}
+
+.navi {
+  grid-area: navi;
+  background: #555555;
+  text-align: right;
+  padding: 12px 6px 12px;
+}
+
+.navlink {
+  padding: 6px 12px 6px;
+}
+
+.intro {
+  grid-area: intro;
+  background: #555555;
+  text-align: center;
+  box-shadow: 5px 5px #888888;
+}
+
+.searchArea {
+  grid-area: searchbox;
+  background: #555555;
+  text-align: center;
+  box-shadow: 5px 5px #888888;
+  max-width: 500px;
+  padding: 10px;
+}
+
+.searchResults {
+  grid-area: results;
+  background: #555555;
+  text-align: center;
+  box-shadow: 5px 5px #888888;
+}
+
+.placeholders {
+  grid-area: placeholders;
+}
+
+img {
+  height: 100px;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* width obviously adjustable */
+#dropdown {
+  grid-template-columns: 1fr;
+  margin: 0 auto 0 0;
+  padding: 0 0 0 0;
+}
+
+/* styling the actual dropdown menu to make it not look super basic */
+#subreddit {
+  height: 40px;
+  width: 100%;
+  background: gray;
+  color: white;
+  font-size: 20px;
+  border-radius: 7px;
+  grid-column: 1 / 3;
+}
+
+/* i just didn't want to retype these properties separately so grouped them here;
+make the text fields match the size of the dropdown */
+#customSub,
+#searchTerm {
+  height: 30px;
+  margin: 10px auto;
+  border-radius: 5px;
+  font-size: 20px;
+  grid-column: 1 / 3;
+}
+
+/* adjusted the custom sub field so it appears right on top of the dropdown to make
+it appear like a native part of the menu; removed border and outline to make it
+look more natural */
+#customSub {
+  width: 90%;
+  border: none;
+  visibility: hidden;
+  background: gray;
+  color: white;
+  grid-column: 1 / 3;
+}
+
+#searchBtn {
+  font-size: 18px;
+  border-radius: 5px;
+  background: gray;
+  color: white;
+}
+
+/* just so the bottom option in the dropdown stands out */
+option.editable {
+  font-style: italic;
+}
+
+/* puts padding between thumbnails when they are displayed on the page */
+.padded {
+  padding: 15px;
+}
+
+
+@media all and (max-width: 930px) {
+  .navibar {
+    grid-template-areas:
+      "logo logo logo logo"
+      "navi navi navi navi";
+  }
+
+  .logo {
+    grid-area: logo;
+    text-align: center;
+  }
+
+  .navi {
+    text-align: center;
+  }
+}
